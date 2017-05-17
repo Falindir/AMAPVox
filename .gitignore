@@ -12,3 +12,11 @@
 /trunk/AMAPVox/AMAPVoxCore/target/
 /trunk/AMAPVox/AMAPVoxGUI/target/
 /trunk/LidarFormatConverter/target/
+
+# for IntelliJ IDE
+*.iml
+*.eml
+*.ipr
+.idea/*
+*.iws
+

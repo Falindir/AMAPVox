@@ -41,6 +41,9 @@ import java.util.List;
 import java.util.logging.Level;
 import javax.imageio.ImageIO;
 import javax.vecmath.Point3d;
+
+import fr.amap.lidar.amapvox.voxelisation.mixmodtrans.MixModTrans;
+import fr.amap.lidar.amapvox.voxelisation.mixmodtrans.Tools;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.log4j.Logger;
 
@@ -90,8 +93,7 @@ public class VoxelAnalysis extends Process implements Cancellable{
     
     //directional transmittance (GTheta)
     private GTheta direcTransmittance;
-    
-    
+
     /**
      *
      */
@@ -801,7 +803,12 @@ public class VoxelAnalysis extends Process implements Cancellable{
                 }
             }
         }
-        
+
+        //Add by Jimmy lopez
+        MixModTrans mix = new MixModTrans(voxels, parameters.infos.getSplit());
+        mix.preprocess().loopR().postprocess();
+        //End add
+
         padComputed = true;
     }
     
