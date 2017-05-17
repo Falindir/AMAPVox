@@ -8,22 +8,46 @@ import javax.vecmath.Point3i;
  */
 public class MixModTrans {
 
+    /**
+     * La liste de Voxel
+     */
     private Voxel[][][] voxels;
 
+    /**
+     * Le split de l'expace voxel
+     */
     private Point3i split;
 
+    /**
+     * La liste des Voxel après l'application du filtre
+     */
     private MiniVoxel[] filtered_data;
 
     private float[][] tempVoxel;
 
+    /**
+     * Le nombre de Voxel qui on un ground_distance > 0
+     */
     private int ground_distance = 0;
 
+    /**
+     * La valeur maximale pour la ground distance
+     */
     private float max_ground_distance = 0;
 
+    /**
+     * Pour la communication avec R
+     */
     private RCommunication R;
 
+    /**
+     * La liste des Voxel avec l'ID ($i_$j_$k)
+     */
     private String[] ijkInit;
 
+    /**
+     * Les résultats du retour du passage dans R
+     */
     private double[][][][] resultat;
 
     public MixModTrans(Voxel[][][] voxels, Point3i split) {
