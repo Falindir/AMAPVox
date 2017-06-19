@@ -804,10 +804,10 @@ public class VoxelAnalysis extends Process implements Cancellable{
             }
         }
 
-        //Add by Jimmy lopez
-        MixModTrans mix = new MixModTrans(voxels, parameters.infos.getSplit());
-        mix.preprocess().loopR().postprocess();
-        //End add
+        //Add by Jimmy Lopez
+        //MixModTrans mix = new MixModTrans(voxels, parameters.infos.getSplit());
+        //mix.preprocess().loopR().postprocess();
+        //End add Jimmy Lopez
 
         padComputed = true;
     }
